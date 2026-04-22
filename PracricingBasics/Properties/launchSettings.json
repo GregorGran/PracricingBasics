@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "PracricingBasics": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
