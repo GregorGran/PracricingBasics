@@ -22,12 +22,24 @@ var words = new Dictionary<int, string>()
 };
 */// comment for not making mess but not deleting this in case i want to remind the logic
 
+using System;
+using System.Runtime.CompilerServices;
+
+
 namespace PracricingBasics
 {
-    public static class Program
+    public class Program
     {
         private static void Main(string[] args)
         {
+            var pizza = new Pizza { Name = "Pizza", Price = 20 };
+            var burger = new Chicken { Name = "Chicken", Price = 15 };
+            var salad = new Gelato { Name = "Gelato", Price = 12 };
+
+            Console.WriteLine(pizza.Name);
+            Console.WriteLine(burger.Name);
+            Console.WriteLine(salad.Name);
+
             Console.WriteLine("Choose a drink:");
             Console.WriteLine("8 - Cola");
             Console.WriteLine("22424 - Water");
@@ -51,6 +63,46 @@ namespace PracricingBasics
                     Console.WriteLine("Invalid choice");
                     break;
             }
+
+            Console.WriteLine("chose an item");
+
+            string inputtwo = Console.ReadLine();
+            int choicer = int.Parse(inputtwo);
+
+            switch (choicer)
+            {
+                case 1:
+                    Console.WriteLine("you chose gose");
+                        break;
+                case 2:
+                    Console.WriteLine("you chose mose");
+                        break;
+                default:
+                    Console.WriteLine("bad choice");
+                        break;
+
+            }
+        }
+        public class Meal
+        {
+            public string Name;
+            public decimal Price;
+            public void PrintInfo(string info) 
+            {
+                Console.WriteLine($"{Name} + {Price} dolalr");
+            }
+        }
+        public class Pizza : Meal 
+        {
+        
+        }
+        public class Chicken : Meal 
+        {
+        
+        }
+        public class Gelato : Meal 
+        {
+        
         }
     }
 }
